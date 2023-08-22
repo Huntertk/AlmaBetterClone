@@ -2,7 +2,7 @@ import React from 'react'
 import awardOne from '../assets/images/awardOne.png'
 import awardTwo from '../assets/images/awardTwo.png'
 import awardThree from '../assets/images/awardThree.png'
-import mentorBackgroundImg from '../assets/images/GrouphomeImg.png'
+import mentorBackgroundImg from '../assets/images/homegroup.png'
 import './hero.scss'
 
 const Hero = () => {
