@@ -1,0 +1,77 @@
+@use '../scss/variables' as *;
+
+.promisingSectionMainContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+
+    .promisingTextContainer{
+
+        .promisingHeader{
+            color: $fontColor;
+            font-size: 1.4rem;
+            margin: 1rem;
+            font-weight: 600;
+        }
+        .promisingDesc{
+            color: $para;
+            font-size: 13px;
+            margin: 0;
+            font-weight: 600;
+            line-height: 1.5rem;
+        }
+    }
+}
+
+// media queries
+//Tablet
+@media screen and (min-width: 767px) {
+    .promisingSectionMainContainer{
+        margin-top: 3rem;
+
+        .promisingTextContainer{
+
+            .promisingHeader{
+                font-size: 1.78rem;
+                font-weight: 500;
+            }
+
+            .promisingDesc{
+                font-size: 1rem;
+            }
+
+        }
+        .promisingImageContainer{
+            width: 50%;
+            margin-inline: auto;
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+// media queries
+//Laptop
+@media screen and (min-width: 1023px) {
+    .promisingSectionMainContainer{
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        padding: 1rem;
+
+        .promisingTextContainer{
+            width: 50%;
+
+            .promisingHeader{
+                margin-left: 0;
+            }
+        }
+        .promisingImageContainer{
+            width: 40%;
+        }
+    }
+}

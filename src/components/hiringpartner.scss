@@ -1,0 +1,73 @@
+@use '../scss/variables' as *;
+
+.hiringPartnerMainContainer{
+    background-color: rgba(252,244,245,1);
+    padding-bottom: 3rem;
+
+    .hiringPartnerTextContainer{
+        text-align: center;
+        padding: 1rem;
+
+        .hiringPartnerHeading{
+            line-height: 1.3em;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        .hiringPartnerDesc{
+            color: $para;
+            font-size: 13px;
+            margin: 0;
+            font-weight: 600;
+        }
+
+    }
+    .hiringCompanyLogoContainer{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        align-content: center;
+        gap: 1rem;
+        padding: 1rem;
+        background-color: $backgroundColor;
+
+        .hiringLogoImage{
+            width: 90px;
+            margin: 0.5rem;
+            transition: all 0.5s linear;
+        }
+        .hiringLogoImage:hover{
+            transform: scale(1.5);
+        }
+    }
+}
+
+
+// media queries
+//Tablet
+@media screen and (min-width: 767px) {
+    .hiringPartnerMainContainer{
+        width: 100%;
+
+        .hiringPartnerTextContainer{
+
+            .hiringPartnerHeading{
+                font-size: 1.8rem;
+                font-weight: 500;
+            }
+            .hiringPartnerDesc{
+                font-size: 1rem;
+                font-weight: 400;
+            }
+        }
+        .hiringCompanyLogoContainer{
+            width: 80%;
+            margin-inline: auto;
+
+            .hiringLogoImage{
+                width: 130px;
+                cursor: pointer;
+            }
+        }
+    }
+}

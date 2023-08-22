@@ -1,0 +1,167 @@
+@use '../scss/variables' as *;
+
+.homeCourseSectionMainContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    padding: 1rem;
+
+
+    .BtnCourseContainer{
+        text-align: center;
+        margin: 1rem 0;
+
+        .homeCourseTitle{
+            color: $fontColor;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .homeCourseDesc{
+            color: $para;
+            font-size: 13px;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .courseBtnContainer{
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+            gap: 0.5rem;
+
+            
+            .courseBtn{
+                background: transparent;
+                color: $highlightColor;
+                line-height: 1.7rem;
+                font-size: 1rem;
+                padding: 0.5rem 1.125rem;
+                border: 1px solid $highlightColor;
+                border-radius: 0.75rem;
+                cursor: pointer;
+                font-weight: 500;
+            }
+
+            .active {
+                background-color: $highlightColor;
+                color: $backgroundColor;
+            }
+
+        }
+    }
+
+
+    .courseCardMainContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        
+        .courseCardContainer{
+            display: flex;
+
+            flex-direction: column;
+            padding: 1rem;
+            box-shadow: 1px 1px 5px 1px #bbb;
+            border-radius: 24px;
+
+            .underline{
+                height: 1px;
+                background-color: #bbb;
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .courseCardTitle{
+                line-height: 1.75rem;
+                font-size: 1.25rem;
+                font-weight: 600;
+            }
+
+            .courseCardDesc{
+                color: $fontColor;
+                font-size: 13px;
+                line-height: 1.5rem;
+                margin: 0;
+                font-weight: 300;
+                margin: 0.5rem 0;
+            }
+
+
+            .courseIconContainer{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .icon{
+                width: 50%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 0.5rem;
+
+                .courseIconText{
+                    font-size: 12px;
+                    color: $para;
+                    line-height: 1rem;
+                }
+
+                .iconCourse{
+                    color: $highlightColor;
+                    font-size: 1.2rem;
+                }
+            }
+
+            .btn{
+               
+                font-size: 13px;
+                font-weight: 600;
+                border: 0;
+                border-radius: 0.5rem;
+                width: 100%;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                text-transform: uppercase;
+                color: $backgroundColor;
+                padding:  1rem;
+                background-color: $highlightColor;
+            }
+        }
+    }
+}
+
+// media queries
+//Tablet
+@media screen and (min-width: 767px) {
+    .homeCourseSectionMainContainer{
+        
+
+        .courseCardMainContainer{
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            .courseCardContainer{
+                width: 46%;
+                margin-inline: auto;
+            }
+        }
+    }
+}
+
+// media queries
+//Laptop
+@media screen and (min-width: 1023px) {
+    .homeCourseSectionMainContainer {
+    
+    
+            .courseCardMainContainer {
+
+    
+                .courseCardContainer {
+                    width: 30%;
+                }
+            }
+        }
+}
